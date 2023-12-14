@@ -1,0 +1,125 @@
+{
+    "categorias": [
+
+        {
+            "ID_STA29": 1,
+            "COD_STA29": "01",
+            "NOM_AGR": "AMOBLAMIENTOS",
+            "OBSERVACIONES": null
+        },
+        {
+            "ID_STA29": 2,
+            "COD_STA29": "02",
+            "NOM_AGR": "BAZAR & DECO",
+            "OBSERVACIONES": null
+        },
+        {
+            "ID_STA29": 3,
+            "COD_STA29": "03",
+            "NOM_AGR": "COLCHONERIA",
+            "OBSERVACIONES": null
+        },
+        {
+            "ID_STA29": 4,
+            "COD_STA29": "04",
+            "NOM_AGR": "HERRAMIENTAS",
+            "OBSERVACIONES": null
+        },
+        {
+            "ID_STA29": 5,
+            "COD_STA29": "05",
+            "NOM_AGR": "LINEA BLANCA",
+            "OBSERVACIONES": null
+        },
+        {
+            "ID_STA29": 6,
+            "COD_STA29": "06",
+            "NOM_AGR": "LINEA MARRON",
+            "OBSERVACIONES": null
+        },
+        {
+            "ID_STA29": 7,
+            "COD_STA29": "07",
+            "NOM_AGR": "LIVING",
+            "OBSERVACIONES": null
+        },
+        {
+            "ID_STA29": 8,
+            "COD_STA29": "08",
+            "NOM_AGR": "PEQUEÑOS ELECTRODOMESTICOS",
+            "OBSERVACIONES": null
+        },
+        {
+            "ID_STA29": 9,
+            "COD_STA29": "09",
+            "NOM_AGR": "REGALERIA",
+            "OBSERVACIONES": null
+        },
+        {
+            "ID_STA29": 10,
+            "COD_STA29": "10",
+            "NOM_AGR": "RODADOS",
+            "OBSERVACIONES": null
+        },
+        {
+            "ID_STA29": 11,
+            "COD_STA29": "03005",
+            "NOM_AGR": "COLCHONES",
+            "OBSERVACIONES": null
+        },
+        {
+            "ID_STA29": 12,
+            "COD_STA29": "01008",
+            "NOM_AGR": "COMEDOR - SILLA",
+            "OBSERVACIONES": null
+        },
+        {
+            "ID_STA29": 13,
+            "COD_STA29": "01007",
+            "NOM_AGR": "COMEDOR - MESA",
+            "OBSERVACIONES": null
+        },
+        {
+            "ID_STA29": 14,
+            "COD_STA29": "03011",
+            "NOM_AGR": "BASES SOMMIER",
+            "OBSERVACIONES": null
+        },
+        {
+            "ID_STA29": 15,
+            "COD_STA29": "03002",
+            "NOM_AGR": "ALMOHADAS",
+            "OBSERVACIONES": null
+        },
+        {
+            "ID_STA29": 16,
+            "COD_STA29": "03001",
+            "NOM_AGR": "ACOLCHADOS",
+            "OBSERVACIONES": null
+        },
+        {
+            "ID_STA29": 17,
+            "COD_STA29": "03003",
+            "NOM_AGR": "CAMAS",
+            "OBSERVACIONES": null
+        },
+        {
+            "ID_STA29": 18,
+            "COD_STA29": "03006",
+            "NOM_AGR": "CUCHETAS",
+            "OBSERVACIONES": null
+        },
+        {
+            "ID_STA29": 19,
+            "COD_STA29": "03007",
+            "NOM_AGR": "CUNAS",
+            "OBSERVACIONES": null
+        },
+        {
+            "ID_STA29": 20,
+            "COD_STA29": "03008",
+            "NOM_AGR": "PIES DE CAMA",
+            "OBSERVACIONES": null
+        }
+    ]
+}
