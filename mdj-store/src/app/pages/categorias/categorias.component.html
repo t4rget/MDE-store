@@ -1,24 +1,11 @@
-<p>categorias is work!</p>
-
 <!-- BARRA DE NAVEGACION -->
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary text-bg-dark">
     <div class="container-fluid">
-  
-      <div class="collapse navbar-collapse" id="navbarScroll">
-        <ul class="navbar-nav mx-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-          <li class="nav-item dropdown" *ngFor="let categoria of categorias">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              {{categoria.NOM_AGR}}
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#" *ngFor="let categoria of categorias">{{categoria.NOM_AGR}}</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Ver mas</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-
+        
+        <app-categoria
+        [categoria]="categoria" *ngFor="let categoria of categorias">
+        </app-categoria>
+      
     </div>
   </nav>

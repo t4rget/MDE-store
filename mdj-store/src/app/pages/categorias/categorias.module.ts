@@ -18,7 +18,8 @@ import { MaterialModule } from 'src/app/material.module';
     MaterialModule
   ],
   exports: [
-    CategoriaComponent,
+    //CategoriaComponent,
+    CategoriasComponent
   ]
 })
 export class CategoriasModule { }

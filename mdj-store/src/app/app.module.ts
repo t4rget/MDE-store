@@ -12,6 +12,7 @@ import { MaterialModule } from './material.module';
 import { FormsModule } from '@angular/forms';
 import { CategoriasModule } from './pages/categorias/categorias.module';
 import { CategoriasComponent } from './pages/categorias/categorias.component';
+import { ProductsModule } from './pages/products/products.module';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { CategoriasComponent } from './pages/categorias/categorias.component';
     HttpClientModule,
     MaterialModule,
     BrowserAnimationsModule,
-    CategoriasModule
+    CategoriasModule,
+    ProductsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

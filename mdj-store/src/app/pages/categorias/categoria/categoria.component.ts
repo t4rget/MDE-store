@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import { Categoria } from '../interface/categoria';
 
 @Component({
@@ -10,5 +10,6 @@ export class CategoriaComponent {
 
   @Input() categoria!: Categoria;
 
+  
 
 }
