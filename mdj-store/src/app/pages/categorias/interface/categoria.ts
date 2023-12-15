@@ -1,6 +1,6 @@
 export interface Categoria {
     idCat: number;
-    codeCat: number;
-    nameCat: string;
+    codeCat: string;
+    NOM_AGR: string;
     obsCat: string;
 }

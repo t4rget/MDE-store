@@ -16,6 +16,9 @@ import { MaterialModule } from 'src/app/material.module';
     CommonModule,
     CategoriasRoutingModule,
     MaterialModule
+  ],
+  exports: [
+    CategoriaComponent,
   ]
 })
 export class CategoriasModule { }

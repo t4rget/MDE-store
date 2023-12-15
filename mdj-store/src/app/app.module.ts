@@ -9,6 +9,9 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; //
 import { MaterialModule } from './material.module';
+import { FormsModule } from '@angular/forms';
+import { CategoriasModule } from './pages/categorias/categorias.module';
+import { CategoriasComponent } from './pages/categorias/categorias.component';
 
 
 @NgModule({
@@ -16,15 +19,18 @@ import { MaterialModule } from './material.module';
     AppComponent,
     HeaderComponent,
     NewsComponent,
-    FooterComponent
+    FooterComponent,
+    
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     HttpClientModule,
     MaterialModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CategoriasModule
   ],
   providers: [],
   bootstrap: [AppComponent]

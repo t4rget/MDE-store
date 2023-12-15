@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Categoria } from '../interface/categoria';
 
 @Component({
   selector: 'app-categoria',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./categoria.component.scss']
 })
 export class CategoriaComponent {
+
+  @Input() categoria!: Categoria;
+
 
 }
