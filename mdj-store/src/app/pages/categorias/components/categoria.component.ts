@@ -1,5 +1,6 @@
 import { Component, Input, Output } from '@angular/core';
 import { Categoria } from '../interface/categoria';
+import { SubCategoria } from '../interface/subcategoria';
 
 @Component({
   selector: 'app-categoria',
@@ -9,6 +10,8 @@ import { Categoria } from '../interface/categoria';
 export class CategoriaComponent {
 
   @Input() categoria!: Categoria;
+
+  @Input() subCategoria!: SubCategoria; // IMPORTACION DE COMPONENT SUBCATEGORIA
 
   
 

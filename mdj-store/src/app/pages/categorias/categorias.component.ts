@@ -11,11 +11,12 @@ import { Categoria } from './interface/categoria';
 export class CategoriasComponent implements OnInit {
 
   categorias!: Categoria[];
+  
 
   constructor(private categoriaSvc: CategoriasService) {}
 
   ngOnInit(): void {
-    this.categoriaSvc.getCategorias()
+    this.categoriaSvc.getSelectorcategorias()
   //  .pipe(
   //    tap( res => console.log(res))
   //  )

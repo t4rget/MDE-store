@@ -1,5 +1,5 @@
 export interface SubCategoria {
     idSubCat: number;
-    codeSubCat: number;
-    nameSubCat: string;
+    COD_STA29: string;
+    NOM_AGR: string;
 }

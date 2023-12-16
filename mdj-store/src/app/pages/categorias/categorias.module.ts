@@ -3,14 +3,16 @@ import { CommonModule } from '@angular/common';
 
 import { CategoriasRoutingModule } from './categorias-routing.module';
 import { CategoriasComponent } from './categorias.component';
-import { CategoriaComponent } from './categoria/categoria.component';
+import { CategoriaComponent } from './components/categoria.component';
 import { MaterialModule } from 'src/app/material.module';
+import { SubcategoriaComponent } from './components/subcategoria.component';
 
 
 @NgModule({
   declarations: [
     CategoriasComponent,
-    CategoriaComponent
+    CategoriaComponent,
+    SubcategoriaComponent
   ],
   imports: [
     CommonModule,
