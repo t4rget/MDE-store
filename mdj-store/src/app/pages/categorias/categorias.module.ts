@@ -6,6 +6,7 @@ import { CategoriasComponent } from './categorias.component';
 import { CategoriaComponent } from './components/categoria.component';
 import { MaterialModule } from 'src/app/material.module';
 import { SubcategoriaComponent } from './components/subcategoria.component';
+import { SubcategoriaService } from './services/subcategoria.service';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { SubcategoriaComponent } from './components/subcategoria.component';
   imports: [
     CommonModule,
     CategoriasRoutingModule,
-    MaterialModule
+    MaterialModule,
+    
   ],
   exports: [
     //CategoriaComponent,

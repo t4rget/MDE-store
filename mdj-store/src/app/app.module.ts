@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { CategoriasModule } from './pages/categorias/categorias.module';
 import { CategoriasComponent } from './pages/categorias/categorias.component';
 import { ProductsModule } from './pages/products/products.module';
+import { CategoriasService } from './pages/categorias/services/categorias.service';
 
 
 @NgModule({
@@ -34,7 +35,7 @@ import { ProductsModule } from './pages/products/products.module';
     CategoriasModule,
     ProductsModule
   ],
-  providers: [],
+  providers: [CategoriasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

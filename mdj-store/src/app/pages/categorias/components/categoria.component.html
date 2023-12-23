@@ -5,7 +5,7 @@
           {{categoria.NOM_AGR}}
         </a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">{{categoria.NOM_AGR}}</a></li>
+          <li><a class="dropdown-item" href="#" *ngFor="let subcategoria of subcategorias">{{subcategoria.NOM_AGR}}</a></li>
           <li><hr class="dropdown-divider"></li>
           <li><a class="dropdown-item" href="#">Ver mas</a></li>
         </ul>
