@@ -1,41 +1,69 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
-import { Categoria } from '../interface/categoria';
+import { Categorias } from '../interface/categorias';
 import { __values } from 'tslib';
-import { SubCategoria } from '../interface/subcategoria';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CategoriasService {
 
-  private apiURL = 'http://localhost:3100';
+  private apiUrl = 'http://localhost:3100';
 
-  public seleccionCategorias = ["01","03","04","05","07","08"];
-  //public categoriaSeleccionadas = [];
+  public categoriaList: Categorias[] = [];
+  private allDatos: Categorias[] = [];
+  public categoriaSettings: string[] = []; //SE INTENTA TRAER DESDE LA API 
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-    getCategorias(): Observable<Categoria[]> {
-      return this.http.get<Categoria[]>(this.apiURL + '/categorias') // /Scategorias son las categorias seleccionadas, deberiamos generar un array nuevo
-  /*      .pipe(
-          map((categorias : Categoria[]) => {
-            return categorias.filter(categoria => this.selectorCategorias.includes(categoria.COD_STA29));
-    })
-        );
-*/  
-    }
+  /*fetchCategorias(): Observable<Categorias[]> {      ////////////METODO OBSOLETO DE LLAMADA A LA API    //////////////////
+    return this.http.get<Categorias[]>(`${this.apiUrl}/categorias`)
+  } */
 
-    getSubcategorias(): Observable<SubCategoria[]> {
-      return this.http.get<SubCategoria[]>(this.apiURL + '/categorias') // /Scategorias son las categorias seleccionadas, deberiamos generar un array nuevo
-       .pipe(
-         map((subcategoriaSeleccionadas : SubCategoria[]) => {
-           return subcategoriaSeleccionadas.filter(subcategoriaSeleccionadas => this.seleccionCategorias.includes(subcategoriaSeleccionadas.COD_STA29)); 
-           
-         })
-         
-        );
-    }
+  fetchCategorias(): Observable<Categorias[]> {
+    return this.http.get<Categorias[]>(`${this.apiUrl}/categorias`)
+      .pipe(
+        map((element: Categorias[]) => {
+          this.allDatos = element;
+          this.fetchCategoriaSettings(); //Lamma al metodo Settings
+          this.filtrarCategorias();  // Llama al método de filtrado
+          return element;
+        })
+      );
+  }
+
+  fetchCategoriaSettings(): any {  ///// LLAMAR DESDE ON INIT PARA GUARDAR categoriaSetting /////
+    return this.http.get<any[]>(`${this.apiUrl}/categoriaSettings`)
+      .pipe(
+        map((codcat: any) => {
+          this.categoriaSettings=codcat;
+          console.log(this.categoriaSettings);
+          return codcat;
+        })
+      );
+  }
+
+  filtrarCategorias(): void {
+    // Filtra los elementos de allDatos donde cod_id coincide con algún elemento de categoriaSelect
+    this.categoriaList = this.allDatos.filter((element) =>
+      this.categoriaSettings.includes(element.cod_id)
+    );
+  }
+
+  getAllDatos(): Categorias[] {
+    return this.allDatos;
+  }
+
+  setCategoria(categoria: Categorias): void {
+    this.allDatos.push(categoria);
+  }
+
+  /*filtrarCategorias(): void {
+    this.subCategoria = this.allDatos.filter((element) =>
+      this.categoriaSelect.includes(element.cod_id)
+    );
+  }*/
+
 
 }

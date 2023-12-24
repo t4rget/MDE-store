@@ -2,163 +2,128 @@
     "categorias": [
 
         {
-            "ID_STA29": 1,
-            "COD_STA29": "01",
-            "NOM_AGR": "AMOBLAMIENTOS",
-            "OBSERVACIONES": null
+            "id": 1,
+            "cod_id": "01",
+            "name": "AMOBLAMIENTOS",
+            "observation": null
         },
         {
-            "ID_STA29": 2,
-            "COD_STA29": "02",
-            "NOM_AGR": "BAZAR & DECO",
-            "OBSERVACIONES": null
+            "id": 2,
+            "cod_id": "02",
+            "name": "BAZAR & DECO",
+            "observation": null
         },
         {
-            "ID_STA29": 3,
-            "COD_STA29": "03",
-            "NOM_AGR": "COLCHONERIA",
-            "OBSERVACIONES": null
+            "id": 3,
+            "cod_id": "03",
+            "name": "COLCHONERIA",
+            "observation": null
         },
         {
-            "ID_STA29": 4,
-            "COD_STA29": "04",
-            "NOM_AGR": "HERRAMIENTAS",
-            "OBSERVACIONES": null
+            "id": 4,
+            "cod_id": "04",
+            "name": "HERRAMIENTAS",
+            "observation": null
         },
         {
-            "ID_STA29": 5,
-            "COD_STA29": "05",
-            "NOM_AGR": "LINEA BLANCA",
-            "OBSERVACIONES": null
+            "id": 5,
+            "cod_id": "05",
+            "name": "LINEA BLANCA",
+            "observation": null
         },
         {
-            "ID_STA29": 6,
-            "COD_STA29": "06",
-            "NOM_AGR": "LINEA MARRON",
-            "OBSERVACIONES": null
+            "id": 6,
+            "cod_id": "06",
+            "name": "LINEA MARRON",
+            "observation": null
         },
         {
-            "ID_STA29": 7,
-            "COD_STA29": "07",
-            "NOM_AGR": "LIVING",
-            "OBSERVACIONES": null
+            "id": 7,
+            "cod_id": "07",
+            "name": "LIVING",
+            "observation": null
         },
         {
-            "ID_STA29": 8,
-            "COD_STA29": "08",
-            "NOM_AGR": "PEQUEÑOS ELECTRODOMESTICOS",
-            "OBSERVACIONES": null
+            "id": 8,
+            "cod_id": "08",
+            "name": "PEQUEÑOS ELECTRODOMESTICOS",
+            "observation": null
         },
         {
-            "ID_STA29": 9,
-            "COD_STA29": "09",
-            "NOM_AGR": "REGALERIA",
-            "OBSERVACIONES": null
+            "id": 9,
+            "cod_id": "09",
+            "name": "REGALERIA",
+            "observation": null
         },
         {
-            "ID_STA29": 10,
-            "COD_STA29": "10",
-            "NOM_AGR": "RODADOS",
-            "OBSERVACIONES": null
+            "id": 10,
+            "cod_id": "10",
+            "name": "RODADOS",
+            "observation": null
         },
         {
-            "ID_STA29": 11,
-            "COD_STA29": "03005",
-            "NOM_AGR": "COLCHONES",
-            "OBSERVACIONES": null
+            "id": 11,
+            "cod_id": "03005",
+            "name": "COLCHONES",
+            "observation": null
         },
         {
-            "ID_STA29": 12,
-            "COD_STA29": "01008",
-            "NOM_AGR": "COMEDOR - SILLA",
-            "OBSERVACIONES": null
+            "id": 12,
+            "cod_id": "01008",
+            "name": "COMEDOR - SILLA",
+            "observation": null
         },
         {
-            "ID_STA29": 13,
-            "COD_STA29": "01007",
-            "NOM_AGR": "COMEDOR - MESA",
-            "OBSERVACIONES": null
+            "id": 13,
+            "cod_id": "01007",
+            "name": "COMEDOR - MESA",
+            "observation": null
         },
         {
-            "ID_STA29": 14,
-            "COD_STA29": "03011",
-            "NOM_AGR": "BASES SOMMIER",
-            "OBSERVACIONES": null
+            "id": 14,
+            "cod_id": "03011",
+            "name": "BASES SOMMIER",
+            "observation": null
         },
         {
-            "ID_STA29": 15,
-            "COD_STA29": "03002",
-            "NOM_AGR": "ALMOHADAS",
-            "OBSERVACIONES": null
+            "id": 15,
+            "cod_id": "03002",
+            "name": "ALMOHADAS",
+            "observation": null
         },
         {
-            "ID_STA29": 16,
-            "COD_STA29": "03001",
-            "NOM_AGR": "ACOLCHADOS",
-            "OBSERVACIONES": null
+            "id": 16,
+            "cod_id": "03001",
+            "name": "ACOLCHADOS",
+            "observation": null
         },
         {
-            "ID_STA29": 17,
-            "COD_STA29": "03003",
-            "NOM_AGR": "CAMAS",
-            "OBSERVACIONES": null
+            "id": 17,
+            "cod_id": "03003",
+            "name": "CAMAS",
+            "observation": null
         },
         {
-            "ID_STA29": 18,
-            "COD_STA29": "03006",
-            "NOM_AGR": "CUCHETAS",
-            "OBSERVACIONES": null
+            "id": 18,
+            "cod_id": "03006",
+            "name": "CUCHETAS",
+            "observation": null
         },
         {
-            "ID_STA29": 19,
-            "COD_STA29": "03007",
-            "NOM_AGR": "CUNAS",
-            "OBSERVACIONES": null
+            "id": 19,
+            "cod_id": "03007",
+            "name": "CUNAS",
+            "observation": null
         },
         {
-            "ID_STA29": 20,
-            "COD_STA29": "03008",
-            "NOM_AGR": "PIES DE CAMA",
-            "OBSERVACIONES": null
+            "id": 20,
+            "cod_id": "03008",
+            "name": "PIES DE CAMA",
+            "observation": null
         }
     ],
-    "Scategorias": [
-
-        {
-            "ID_STA29": 1,
-            "COD_STA29": "01",
-            "NOM_AGR": "AMOBLAMIENTOS",
-            "OBSERVACIONES": null
-        },
-        {
-            "ID_STA29": 3,
-            "COD_STA29": "03",
-            "NOM_AGR": "COLCHONERIA",
-            "OBSERVACIONES": null
-        },
-        {
-            "ID_STA29": 4,
-            "COD_STA29": "04",
-            "NOM_AGR": "HERRAMIENTAS",
-            "OBSERVACIONES": null
-        },
-        {
-            "ID_STA29": 5,
-            "COD_STA29": "05",
-            "NOM_AGR": "LINEA BLANCA",
-            "OBSERVACIONES": null
-        },
-        {
-            "ID_STA29": 7,
-            "COD_STA29": "07",
-            "NOM_AGR": "LIVING",
-            "OBSERVACIONES": null
-        },
-        {
-            "ID_STA29": 8,
-            "COD_STA29": "08",
-            "NOM_AGR": "PEQUEÑOS ELECTRODOMESTICOS",
-            "OBSERVACIONES": null
-        }
+    "categoriaSettings": [
+        "01", "03", "04", "05", "07", "08"
     ]
+    
 }
