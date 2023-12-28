@@ -133,7 +133,7 @@
             "sinonimo": "H2752F",
             "precio": 599999,
             "stock": 5,
-            "url": "foto1.jpg"
+            "url": "./assets/products_test/aire_acondicionado_hyundai_2752f_3200w_split_frio_calor_onoff.webp"
         },
         {
             "id": 2,
@@ -142,7 +142,7 @@
             "sinonimo": "H4500F",
             "precio": 999999,
             "stock": 5,
-            "url": "foto2.jpg"
+            "url": "./assets/products_test/aire_acondicionado_hyundai_4500f_5300w_split_frio_calor_onoff.webp"
         },
         {
             "id": 3,
@@ -151,7 +151,7 @@
             "sinonimo": "HDR280FOOB",
             "precio": 799999,
             "stock": 5,
-            "url": "foto3.jpg"
+            "url": "./assets/products_test/heladera_drean_hdr280f00b_cycle_defrost_277_litros_blanca.webp"
         },
         {
             "id": 4,
@@ -160,7 +160,7 @@
             "sinonimo": "MT43E3A",
             "precio": 299999,
             "stock": 5,
-            "url": "foto4.jpg"
+            "url": "./assets/products_test/smart_tv_motorola_mt43e3a_43_fhd_android_tv.webp"
         },
         {
             "id": 5,
@@ -169,7 +169,7 @@
             "sinonimo": "DK75X7500PI",
             "precio": 699999,
             "stock": 5,
-            "url": "foto5.jpg"
+            "url": "./assets/products_test/smart_tv_noblex_dk75x7500pi_75_4k_uhd.webp"
         },
         {
             "id": 6,
@@ -178,7 +178,7 @@
             "sinonimo": "A14AROO",
             "precio": 399999,
             "stock": 5,
-            "url": "foto6.jpg"
+            "url": "./assets/products_test/celular_samsung_galaxy_a14_4gb_ram_128gb_plata.webp"
         },
         {
             "id": 7,
@@ -187,7 +187,7 @@
             "sinonimo": "TP-22",
             "precio": 99999,
             "stock": 5,
-            "url": "foto7.jpg"
+            "url": "./assets/products_test/ventilador_de_pie_everest_tp_22_turbo_reclinable_20_paletas_plasticas_color_negro.webp"
         },
         {
             "id": 8,
@@ -196,7 +196,7 @@
             "sinonimo": "S380",
             "precio": 199999,
             "stock": 5,
-            "url": "foto8.jpg"
+            "url": "./assets/products_test/sierra_skil_caladora_380w_1_velocidad_hobby.webp"
         }
     ]
 }

@@ -55,8 +55,8 @@ export class CategoriasComponent implements OnInit {
         next: (data: Categorias[]) => {
           this.allDatos = data;
           this.categoriaList = this.categoriaSvc.categoriaList;
-          console.log(this.allDatos);
-          console.table(this.categoriaList);
+          //console.log(this.allDatos);
+          //console.table(this.categoriaList);
         },
         error: (error: any) => {
           console.error('Error fetching data:', error);

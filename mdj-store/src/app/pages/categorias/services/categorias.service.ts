@@ -38,7 +38,7 @@ export class CategoriasService {
       .pipe(
         map((codcat: any) => {
           this.categoriaSettings=codcat;
-          console.log(this.categoriaSettings);
+          //console.log(this.categoriaSettings);
           return codcat;
         })
       );

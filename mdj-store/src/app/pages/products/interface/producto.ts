@@ -1,8 +1,11 @@
-export interface Product {
+export interface Productos {
+
     id: number;
-    name: string;
-    price: number;
-    description: string;
-    categoryId: number;
+    cod_pro: string;
+    descripcion: string;
+    sinonimo: string;
+    precio: number;
     stock: number;
+    url: string;
+    
 }
