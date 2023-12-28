@@ -14,6 +14,7 @@ export class CategoriasComponent implements OnInit {
   public allDatos: Categorias[] = [] ;
   public categoriaSettings: string[] = [] ;
   public categoriaList: Categorias[] = [];
+  public subcategoriaList: Categorias[] = [];
 
   constructor(private categoriaSvc: CategoriasService) {}
 
@@ -48,6 +49,9 @@ export class CategoriasComponent implements OnInit {
   } */
 
   ngOnInit(): void {
+
+    
+
     this.categoriaSvc.fetchCategoriaSettings().pipe(
       switchMap(() => this.categoriaSvc.fetchCategorias())
     ).subscribe(
@@ -57,6 +61,7 @@ export class CategoriasComponent implements OnInit {
           this.categoriaList = this.categoriaSvc.categoriaList;
           //console.log(this.allDatos);
           //console.table(this.categoriaList);
+          this.categoriaSvc.filtrarSubCategorias();
         },
         error: (error: any) => {
           console.error('Error fetching data:', error);

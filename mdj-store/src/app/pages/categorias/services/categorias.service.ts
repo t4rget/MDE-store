@@ -14,6 +14,7 @@ export class CategoriasService {
   public categoriaList: Categorias[] = [];
   private allDatos: Categorias[] = [];
   public categoriaSettings: string[] = []; //SE INTENTA TRAER DESDE LA API 
+  public subcategoriaList: Categorias[] = [];
 
   constructor(private http: HttpClient) {}
 
@@ -51,19 +52,23 @@ export class CategoriasService {
     );
   }
 
-  getAllDatos(): Categorias[] {
-    return this.allDatos;
-  }
+  // getAllDatos(): Categorias[] {
+  //   return this.allDatos;
+  // }
 
-  setCategoria(categoria: Categorias): void {
+  setCategoria(categoria: Categorias): void {   //METODO PARA AGREGAR CATEGORIAS - REVISAR!!!!!!!!  ///
     this.allDatos.push(categoria);
   }
 
-  /*filtrarCategorias(): void {
-    this.subCategoria = this.allDatos.filter((element) =>
-      this.categoriaSelect.includes(element.cod_id)
-    );
-  }*/
+  filtrarSubCategorias(): void {
+    this.subcategoriaList = this.allDatos.filter((element2) =>
+      this.categoriaSettings.some(element1 => element2.cod_id.toLowerCase().startsWith(element1.toLowerCase()))
+    )
+    console.log(this.subcategoriaList)
+
+  }
+
+ 
 
 
 }
