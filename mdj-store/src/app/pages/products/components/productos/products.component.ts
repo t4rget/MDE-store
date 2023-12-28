@@ -14,6 +14,7 @@ import { tap } from 'rxjs/operators';
 export class ProductsComponent implements OnInit {
 
   public allProducts!: Productos[];
+  public stockProducts!: Productos[];
 
   constructor(private productSVC : ProductsService) { }
 
@@ -26,13 +27,61 @@ export class ProductsComponent implements OnInit {
             {
               next: (data: Productos[]) => {
                 this.allProducts = data;
-                //console.table(this.allProducts);
-              },
+
+              /*  this.productSVC.getFilteredStockProducts()
+                console.table(this.stockProducts);
+                  /*.subscribe(
+                    {
+                      next: (produc: Productos[]) => {
+                        this.stockProducts = produc;
+                        console.table(this.stockProducts);
+                      },
+                      error: (error: any) => {
+                        console.error(error);
+                      }
+                    }
+
+                  )*/
+                this.productSVC.getStockProducts()
+                  .subscribe(
+                    {
+                      next: (stockProducts: Productos[]) => {
+                        this.stockProducts = stockProducts.filter(stock => stock.stock > 0);
+                        console.log('stockproductscomponent', this.stockProducts);
+                      },
+                      error: (error: any) => {
+                        console.error('Error al obtener los productos con stock', error);
+                      }
+                    }
+                  );
+                },
               error: (error: any) => {
                 console.error('Error al obtener los productos', error);
               }
             }
           );
+          /*this.productSVC.getStockProducts().subscribe({
+            next: (data: Productos[]) => {
+              this.stockProducts = data;
+              console.log('stockProducts:', this.stockProducts);
+            },
+            error: (error: any) => {
+              console.error('Error al obtener los productos con stock', error);
+            }
+          });*/
+          /*this.stockProducts = this.productSVC.getFilteredStockProducts()
+            .subscribe(
+              {
+                next: (data : Productos) => {
+                  this.stockProducts = data;
+                  console.log('filtered', this.stockProducts);
+                },
+                error: (error: any) => {
+                  console.error('Error getfilered', error)
+                }
+              }
+            );*/
+
     }
  
  

@@ -64,7 +64,7 @@ export class CategoriasService {
     this.subcategoriaList = this.allDatos.filter((element2) =>
       this.categoriaSettings.some(element1 => element2.cod_id.toLowerCase().startsWith(element1.toLowerCase()))
     )
-    console.log(this.subcategoriaList)
+    //console.log(this.subcategoriaList)
 
   }
 

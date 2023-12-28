@@ -195,8 +195,18 @@
             "descripcion": "Sierra SKIL caladora 380w 1 velocidad hobby",
             "sinonimo": "S380",
             "precio": 199999,
-            "stock": 5,
+            "stock": 1,
+            "url": "./assets/products_test/sierra_skil_caladora_380w_1_velocidad_hobby.webp"
+        },
+        {
+            "id": 9,
+            "cod_pro": "090090009009009",
+            "descripcion": "Sierra SKIL caladora 800w 2 velocidad hobby",
+            "sinonimo": "S800",
+            "precio": 299999,
+            "stock": 1,
             "url": "./assets/products_test/sierra_skil_caladora_380w_1_velocidad_hobby.webp"
         }
+
     ]
 }
