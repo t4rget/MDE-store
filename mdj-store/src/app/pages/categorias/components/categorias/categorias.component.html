@@ -5,12 +5,16 @@
  
       <div class="collapse navbar-collapse d-sm" id="navbarScroll">
         <ul class="navbar-nav mx-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-          <li *ngFor="let list of categoriaList" class="nav-item dropdown d-flex">
+          <li *ngFor="let categoria of categoriaList" class="nav-item dropdown d-flex">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              {{ list.name }}
+              {{ categoria.name }}
             </a>
             <ul class="dropdown-menu">
-              <li *ngFor="let cat of categoriaList"><a class="dropdown-item" href="#" >{{ cat.name }}</a></li>
+              <ng-container *ngFor="let subcategoria of allDatos">
+                <li *ngIf="subcategoria.cod_id.startsWith(categoria.cod_id)">
+                  <a class="dropdown-item" href="#" >{{ subcategoria.name }}</a>
+                </li>
+              </ng-container>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#">Ver mas</a></li>
             </ul>
