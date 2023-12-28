@@ -124,6 +124,79 @@
     ],
     "categoriaSettings": [
         "01", "03", "04", "05", "07", "08"
+    ],
+    "products": [
+        {
+            "id": 1,
+            "cod_pro": "010010001001001",
+            "descripcion": "Aire Acondicionado HYUNDAI 2752F 3200W Split Frio Calor On/Off",
+            "sinonimo": "H2752F",
+            "precio": 599999,
+            "stock": 5,
+            "url": "foto1.jpg"
+        },
+        {
+            "id": 2,
+            "cod_pro": "020020002002002",
+            "descripcion": "Aire Acondicionado HYUNDAI 4500F 5300w Split Frio Calor On/Off",
+            "sinonimo": "H4500F",
+            "precio": 999999,
+            "stock": 5,
+            "url": "foto2.jpg"
+        },
+        {
+            "id": 3,
+            "cod_pro": "03003000300300",
+            "descripcion": "Heladera DREAN HDR280F00B Cycle Defrost 277 Litros Blanca",
+            "sinonimo": "HDR280FOOB",
+            "precio": 799999,
+            "stock": 5,
+            "url": "foto3.jpg"
+        },
+        {
+            "id": 4,
+            "cod_pro": "040040004004004",
+            "descripcion": "Smart TV MOTOROLA MT43E3A 43'' FHD Android Tv",
+            "sinonimo": "MT43E3A",
+            "precio": 299999,
+            "stock": 5,
+            "url": "foto4.jpg"
+        },
+        {
+            "id": 5,
+            "cod_pro": "050050005005005",
+            "descripcion": "Smart TV NOBLEX DK75X7500PI 75'' 4K UHD",
+            "sinonimo": "DK75X7500PI",
+            "precio": 699999,
+            "stock": 5,
+            "url": "foto5.jpg"
+        },
+        {
+            "id": 6,
+            "cod_pro": "060060006006006",
+            "descripcion": "Celular SAMSUNG GALAXY A14 4gb RAM 128gb plata",
+            "sinonimo": "A14AROO",
+            "precio": 399999,
+            "stock": 5,
+            "url": "foto6.jpg"
+        },
+        {
+            "id": 7,
+            "cod_pro": "070070007007007",
+            "descripcion": "Ventilador de Pie EVEREST TP-22 Turbo Reclinable 20'' Color Negro",
+            "sinonimo": "TP-22",
+            "precio": 99999,
+            "stock": 5,
+            "url": "foto7.jpg"
+        },
+        {
+            "id": 8,
+            "cod_pro": "080080008008008",
+            "descripcion": "Sierra SKIL caladora 380w 1 velocidad hobby",
+            "sinonimo": "S380",
+            "precio": 199999,
+            "stock": 5,
+            "url": "foto8.jpg"
+        }
     ]
-    
 }
