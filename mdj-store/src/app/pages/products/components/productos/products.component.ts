@@ -46,8 +46,9 @@ export class ProductsComponent implements OnInit {
                   .subscribe(
                     {
                       next: (stockProducts: Productos[]) => {
-                        this.stockProducts = stockProducts.filter(stock => stock.stock > 0);
-                        console.log('stockproductscomponent', this.stockProducts);
+                        this.stockProducts = stockProducts.filter(stock => stock.stock_prod > 0);
+                        console.log('stockProductsComponents', this.stockProducts);
+                        console.log(this.productSVC.getAPI());
                       },
                       error: (error: any) => {
                         console.error('Error al obtener los productos con stock', error);

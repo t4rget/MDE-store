@@ -3,13 +3,14 @@ import { Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
 import { Categorias } from '../interface/categorias';
 import { __values } from 'tslib';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CategoriasService {
 
-  private apiUrl = 'http://localhost:3100';
+  private apiUrl = environment.apiUrl;
 
   public categoriaList: Categorias[] = [];
   private allDatos: Categorias[] = [];

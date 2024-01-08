@@ -22,7 +22,7 @@ import { ProductsService } from './pages/products/services/products.service';
     HeaderComponent,
     NewsComponent,
     FooterComponent,
-    
+
     
   ],
   imports: [

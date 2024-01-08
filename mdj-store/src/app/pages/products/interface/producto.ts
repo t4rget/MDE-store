@@ -1,11 +1,12 @@
 export interface Productos {
 
-    id: number;
-    cod_pro: string;
-    descripcion: string;
-    sinonimo: string;
-    precio: number;
-    stock: number;
-    url: string;
+    idcodproducto: number;
+    codlistprecio_prod: number;
+    desc_prod: string;
+    desca_prod: string;
+    nomlistprecio_prod: string;
+    precio_prod: DoubleRange;
+    stock_prod: number;
+    urlimagen_prod: string;
     
 }
