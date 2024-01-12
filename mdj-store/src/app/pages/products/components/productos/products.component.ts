@@ -1,10 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Productos } from '../../interface/producto';
 import { ProductsService } from '../../services/products.service';
-import { tap } from 'rxjs/operators';
-//import { tap } from 'rxjs/operators';
-
-//import { Product } from './interface/producto.interface';
+import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
+import { SearchService } from 'src/app/shared/services/search.service';
 
 @Component({
   selector: 'app-products',
@@ -13,86 +11,55 @@ import { tap } from 'rxjs/operators';
 })
 export class ProductsComponent implements OnInit {
 
-  public allProducts!: Productos[];
   public stockProducts!: Productos[];
+  
+  searchResultMessage: string = '';
+  searchResultMatch: boolean = true;
 
-  constructor(private productSVC : ProductsService) { }
+  // BUSCADOR
+  productsSearched: Productos[] = [];
 
-    ngOnInit(): void {
-         this.productSVC.getProducts()
-          //  .pipe(
-          //    tap((allProducts: Productos[]) => this.allProducts = allProducts)
-          //  )
-          .subscribe(
-            {
-              next: (data: Productos[]) => {
-                this.allProducts = data;
 
-              /*  this.productSVC.getFilteredStockProducts()
-                console.table(this.stockProducts);
-                  /*.subscribe(
-                    {
-                      next: (produc: Productos[]) => {
-                        this.stockProducts = produc;
-                        console.table(this.stockProducts);
-                      },
-                      error: (error: any) => {
-                        console.error(error);
-                      }
-                    }
+  constructor(private productSVC : ProductsService, private searchSVC : SearchService) { }
 
-                  )*/
-                this.productSVC.getStockProducts()
-                  .subscribe(
-                    {
-                      next: (stockProducts: Productos[]) => {
-                        this.stockProducts = stockProducts.filter(stock => stock.stock_prod > 0);
-                        console.log('stockProductsComponents', this.stockProducts);
-                        console.log(this.productSVC.getAPI());
-                      },
-                      error: (error: any) => {
-                        console.error('Error al obtener los productos con stock', error);
-                      }
-                    }
-                  );
-                },
-              error: (error: any) => {
-                console.error('Error al obtener los productos', error);
-              }
-            }
-          );
-          /*this.productSVC.getStockProducts().subscribe({
-            next: (data: Productos[]) => {
-              this.stockProducts = data;
-              console.log('stockProducts:', this.stockProducts);
-            },
-            error: (error: any) => {
-              console.error('Error al obtener los productos con stock', error);
-            }
-          });*/
-          /*this.stockProducts = this.productSVC.getFilteredStockProducts()
-            .subscribe(
-              {
-                next: (data : Productos) => {
-                  this.stockProducts = data;
-                  console.log('filtered', this.stockProducts);
-                },
-                error: (error: any) => {
-                  console.error('Error getfilered', error)
-                }
-              }
-            );*/
-
+  ngOnInit(): void {
+    // Obtener los productos con stock
+    this.productSVC.getStockProducts().subscribe((data: Productos[]) => {
+      this.stockProducts = data;
+      this.filterProducts();
+      console.log("PRODSEARCH", this.productsSearched);
+    });
+  
+    // Suscribirse a cambios en los términos de búsqueda
+    this.searchSVC.inputDataChanged.subscribe(() => {
+      this.filterProducts();
+      console.log("PRODSEARCH", this.productsSearched);
+    });
+  }
+  
+  filterProducts(): void {
+    // Filtrar productos con stock
+    const stockProducts = this.stockProducts.filter(product => product.stock_prod > 0);
+  
+    // Filtrar productos cuando se recibe un cambio en el término de búsqueda
+    const searchTerm = this.searchSVC.getInputData().toLowerCase();
+  
+    if (searchTerm) {
+      this.productsSearched = stockProducts.filter(
+        (product) =>
+          product.desc_prod.toLowerCase().includes(searchTerm) ||
+          product.desca_prod.toLowerCase().includes(searchTerm)
+      );
+  
+      this.searchResultMatch = this.productsSearched.length > 0;
+      this.searchResultMessage = this.searchResultMatch ? '' : 'No se encontraron resultados';
+    } else {
+      // Si no hay término de búsqueda, mostrar todos los productos con stock
+      this.productsSearched = [...stockProducts];
+      this.searchResultMatch = true;
+      this.searchResultMessage = '';
     }
- 
- 
-  // ngOnInit(): void {
-  //   this.productSVC.getProducts()
-  //   .pipe(
-  //     tap((allProducts: Producto[]) => this.allProducts = allProducts)
-  //   )
-  //   .subscribe();
-  //   console.log(this.allProducts);
-  // }
+  }
+
 
 }

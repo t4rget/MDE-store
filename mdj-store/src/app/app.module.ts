@@ -14,6 +14,7 @@ import { CategoriasModule } from './pages/categorias/categorias.module';
 import { ProductsModule } from './pages/products/products.module';
 import { CategoriasService } from './pages/categorias/services/categorias.service';
 import { ProductsService } from './pages/products/services/products.service';
+import { SearchService } from './shared/services/search.service';
 
 
 @NgModule({
@@ -35,7 +36,7 @@ import { ProductsService } from './pages/products/services/products.service';
     CategoriasModule,
     ProductsModule
   ],
-  providers: [CategoriasService, ProductsService],
+  providers: [CategoriasService, ProductsService, SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

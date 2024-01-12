@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [{ path: 'products', loadChildren: () => import('./pages/products/products.module').then(m => m.ProductsModule) },
- { path: 'categorias', loadChildren: () => import('./pages/categorias/categorias.module').then(m => m.CategoriasModule) }];
+const routes: Routes = [
+  
+  { path: 'products', loadChildren: () => import('./pages/products/products.module').then(m => m.ProductsModule) },
+
+  { path: 'categorias', loadChildren: () => import('./pages/categorias/categorias.module').then(m => m.CategoriasModule) }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
